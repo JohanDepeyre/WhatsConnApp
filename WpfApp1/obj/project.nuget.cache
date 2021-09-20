@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "iLyTRjDPlXjYhsXp+bB7RKseHiyglgD3h14JqO3KqMRM78N+epJopGETyC96J22bJ7rndaEsOgjAZtoVwQYRcw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\j.depeyre\\source\\repos\\WhatConnectors\\WpfApp1\\WhatConnectors.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\j.depeyre\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.18362.2005\\microsoft.windows.sdk.contracts.10.0.18362.2005.nupkg.sha512",
+    "C:\\Users\\j.depeyre\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
+    "C:\\Users\\j.depeyre\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
+    "C:\\Users\\j.depeyre\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

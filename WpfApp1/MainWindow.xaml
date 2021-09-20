@@ -5,17 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="1100">
     <Grid>
-        <Button x:Name="CmdSuivant" Content="Suivant" HorizontalAlignment="Left" Margin="390,91,0,0" VerticalAlignment="Top" Width="75" Click="CmdSuivant_Click"/>
-        <Label x:Name="LblConnecteur" Content="Label" HorizontalAlignment="Left" Margin="128,91,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="CmdGo" Content="Départ" HorizontalAlignment="Left" Margin="41,55,0,0" VerticalAlignment="Top" Width="75" Click="CmdGo_Click"/>
-        <Button Name="CmdImg1" Margin="56,265,609,41" Click="CmdImg1_Click"/>
-        <Button x:Name="CmdImg2" Margin="210,265,455,41" Click="CmdImg2_Click"/>
-        <Button x:Name="CmdImg3" Margin="363,265,302,41" Click="CmdImg3_Click"/>
-        <Button x:Name="CmdImg4" Margin="538,265,127,41" Click="CmdImg4_Click"/>
-        <Label x:Name="LblSucces" Content="Label" HorizontalAlignment="Left" Margin="650,79,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="LblPoint" Content="Label" HorizontalAlignment="Left" Margin="665,145,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="CmdSuivant" Content="Suivant" HorizontalAlignment="Left" Margin="497,235,0,0" VerticalAlignment="Top" Width="75" Click="CmdSuivant_Click" FontFamily="Rubik" FontSize="18" Height="30" Background="#FFFFA5A5"/>
+        <Label x:Name="LblConnecteur" Content="" HorizontalAlignment="Left" Margin="340,235,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="18"/>
+        <Button x:Name="CmdGo" Content="Départ" HorizontalAlignment="Left" Margin="52,171,0,0" VerticalAlignment="Top" Width="75" Click="CmdGo_Click" FontSize="18" Background="#FFA7B7F1" FontFamily="Rubik"/>
+        <Button Name="CmdImg1" Tag="1" Width="100" Height="100" Margin="27,372,965,147" Click="CmdImg1_Click"/>
+        <Button x:Name="CmdImg2" Tag="2" Width="100" Height="100" Margin="145,372,847,147" Click="CmdImg1_Click"/>
+        <Button x:Name="CmdImg3" Tag="3" Width="100" Height="100" Margin="267,372,725,147" Click="CmdImg1_Click"/>
+        <Button x:Name="CmdImg4" Tag="4" Width="100" Height="100" Margin="390,372,602,147" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg5"  Tag="5" Width="100" Height="100" Margin="513,372,479,147" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg6" Tag="6" Width="100" Height="100" Margin="628,372,364,147" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg7" Tag="7" Width="100" Height="100" Margin="744,372,248,147" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg8" Tag="8" Width="100" Height="100" Margin="849,372,143,147" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg9" Tag="9" Width="100" Height="100" Margin="971,372,21,147" Click="CmdImg1_Click"/>
+
+        <Label x:Name="LblSucces" Content="" HorizontalAlignment="Left" Margin="923,221,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="60" Width="119" FontSize="36"/>
+        <Label x:Name="LblPoint" Content="" HorizontalAlignment="Left" Margin="645,235,0,0" VerticalAlignment="Top" Width="151" Height="27" FontSize="16" FontFamily="Rubik"/>
+        <Label x:Name="LblConsigne" Content="Identifiez le connecteur qui s'affiche ci-dessous en &#xD;&#xA;cliquant sur la bonne image" HorizontalAlignment="Left" Margin="52,34,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="73" Width="676"/>
+        <Label x:Name="LblConsigneCon" Content="Idenfitifier le connecteur suivant :" HorizontalAlignment="Left" Margin="52,235,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.74,-0.951"/>
+        <Image x:Name="ImgLogo" HorizontalAlignment="Left" Height="113" Margin="771,10,0,0" VerticalAlignment="Top" Width="214" Source="images/logo.png"/>
 
     </Grid>
 </Window>

@@ -1,17 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfApp1
 {
@@ -34,8 +27,13 @@ namespace WpfApp1
             tableauConnecteur.Add("PCI-Express", "images/pci.png");
             tableauConnecteur.Add("USB", "images/usb.png");
             tableauConnecteur.Add("USB-C", "images/usbc.png");
-           
-           
+            tableauConnecteur.Add("Display Port", "images/dp.png");
+            tableauConnecteur.Add("HDMI Male", "images/hdmimale.png");
+            tableauConnecteur.Add("VGA", "images/portvga.png");
+            tableauConnecteur.Add("PS2", "images/ps2.png");
+            tableauConnecteur.Add("RJ11", "images/rj11.png");
+         
+
 
         }
 
@@ -47,13 +45,12 @@ namespace WpfApp1
         {
 
             Random random = new Random();
-            int nombreRandom = random.Next(3);
+            int nombreRandom = random.Next(8);
             goodAnswer = tableauConnecteur.ElementAt(nombreRandom).Value;
             LblConnecteur.Content = tableauConnecteur.ElementAt(nombreRandom).Key;
             EnableBouton();
             AfficherConnecteur();
-            afficherScore();
-            nombreQ++;
+         
         }
 
         void AfficherConnecteur()
@@ -65,7 +62,7 @@ namespace WpfApp1
             string valueDic;
             Uri resourceUri;
             Random random = new Random();
-            nombreRandom = random.Next(3);
+            nombreRandom = random.Next(8);
 
 
             valueDic = tableauConnecteurImage.ElementAt(nombreRandom).Value;
@@ -84,7 +81,7 @@ namespace WpfApp1
 
 
 
-            nombreRandom = random.Next(2);
+            nombreRandom = random.Next(7);
             valueDic = tableauConnecteurImage.ElementAt(nombreRandom).Value;
             resourceUri = new Uri(valueDic, UriKind.Relative);
             if (goodAnswer == valueDic)
@@ -100,7 +97,7 @@ namespace WpfApp1
 
 
 
-            nombreRandom = random.Next(1);
+            nombreRandom = random.Next(6);
             valueDic = tableauConnecteurImage.ElementAt(nombreRandom).Value;
             resourceUri = new Uri(valueDic, UriKind.Relative);
             if (goodAnswer == valueDic)
@@ -116,7 +113,7 @@ namespace WpfApp1
 
 
 
-            nombreRandom = random.Next(0);
+            nombreRandom = random.Next(5);
             valueDic = tableauConnecteurImage.ElementAt(nombreRandom).Value;
             resourceUri = new Uri(valueDic, UriKind.Relative);
             if (goodAnswer == valueDic)
@@ -130,7 +127,76 @@ namespace WpfApp1
                 VerticalAlignment = VerticalAlignment.Center
             };
 
+            nombreRandom = random.Next(4);
+            valueDic = tableauConnecteurImage.ElementAt(nombreRandom).Value;
+            resourceUri = new Uri(valueDic, UriKind.Relative);
+            if (goodAnswer == valueDic)
+            {
+                bonBouton = 5;
+            }
+            tableauConnecteurImage.Remove(tableauConnecteurImage.ElementAt(nombreRandom).Key);
+            CmdImg5.Content = new Image
+            {
+                Source = new BitmapImage(resourceUri),
+                VerticalAlignment = VerticalAlignment.Center
+            };
 
+            nombreRandom = random.Next(3);
+            valueDic = tableauConnecteurImage.ElementAt(nombreRandom).Value;
+            resourceUri = new Uri(valueDic, UriKind.Relative);
+            if (goodAnswer == valueDic)
+            {
+                bonBouton = 6;
+            }
+            tableauConnecteurImage.Remove(tableauConnecteurImage.ElementAt(nombreRandom).Key);
+            CmdImg6.Content = new Image
+            {
+                Source = new BitmapImage(resourceUri),
+                VerticalAlignment = VerticalAlignment.Center
+            };
+
+
+            nombreRandom = random.Next(2);
+            valueDic = tableauConnecteurImage.ElementAt(nombreRandom).Value;
+            resourceUri = new Uri(valueDic, UriKind.Relative);
+            if (goodAnswer == valueDic)
+            {
+                bonBouton = 7;
+            }
+            tableauConnecteurImage.Remove(tableauConnecteurImage.ElementAt(nombreRandom).Key);
+            CmdImg7.Content = new Image
+            {
+                Source = new BitmapImage(resourceUri),
+                VerticalAlignment = VerticalAlignment.Center
+            };
+
+            nombreRandom = random.Next(1);
+            valueDic = tableauConnecteurImage.ElementAt(nombreRandom).Value;
+            resourceUri = new Uri(valueDic, UriKind.Relative);
+            if (goodAnswer == valueDic)
+            {
+                bonBouton = 8;
+            }
+            tableauConnecteurImage.Remove(tableauConnecteurImage.ElementAt(nombreRandom).Key);
+            CmdImg8.Content = new Image
+            {
+                Source = new BitmapImage(resourceUri),
+                VerticalAlignment = VerticalAlignment.Center
+            };
+
+            nombreRandom = random.Next(0);
+            valueDic = tableauConnecteurImage.ElementAt(nombreRandom).Value;
+            resourceUri = new Uri(valueDic, UriKind.Relative);
+            if (goodAnswer == valueDic)
+            {
+                bonBouton = 9;
+            }
+            tableauConnecteurImage.Remove(tableauConnecteurImage.ElementAt(nombreRandom).Key);
+            CmdImg9.Content = new Image
+            {
+                Source = new BitmapImage(resourceUri),
+                VerticalAlignment = VerticalAlignment.Center
+            };
 
         }
 
@@ -141,80 +207,79 @@ namespace WpfApp1
 
         private void CmdImg1_Click(object sender, RoutedEventArgs e)
         {
-            if (bonBouton== 1)
+            var myValue = ((Button)sender).Tag;
+            if (bonBouton== int.Parse((string)myValue))
             {
                 LblSucces.Content = "Bravo";
+                
+                LblSucces.Foreground = Brushes.Green;
                 score++;
             }
             else
             {
                 LblSucces.Content = "Faux";
+                LblSucces.Foreground = Brushes.Red;
             }
             DisableBouton();
-
+            nombreQ++;
+            
+            afficherScore();
+            if (nombreQ == 10)
+            {
+                MessageFin();
+            }
+            
         }
 
-        private void CmdImg2_Click(object sender, RoutedEventArgs e)
-        {
-            if (bonBouton == 2)
-            {
-                LblSucces.Content = "Bravo";
-                score++;
-            }
-            else
-            {
-                LblSucces.Content = "Faux";
-            }
-            DisableBouton();
-        }
-
-        private void CmdImg3_Click(object sender, RoutedEventArgs e)
-        {
-            if (bonBouton == 3)
-            {
-                LblSucces.Content = "Bravo";
-                score++;
-            }
-            else
-            {
-                LblSucces.Content = "Faux";
-            }
-            DisableBouton();
-        }
-
-        private void CmdImg4_Click(object sender, RoutedEventArgs e)
-        {
-            if (bonBouton == 4)
-            {
-                LblSucces.Content = "Bravo";
-                score++;
-            }
-            else
-            {
-                LblSucces.Content = "Faux";
-            }
-            DisableBouton();
-        }
 
         void DisableBouton()
         {
 
             CmdImg1.IsEnabled = false;
-            CmdImg1.IsEnabled = false;
-            CmdImg1.IsEnabled = false;
-            CmdImg1.IsEnabled = false;
+            CmdImg2.IsEnabled = false;
+            CmdImg3.IsEnabled = false;
+            CmdImg4.IsEnabled = false;
+            CmdImg5.IsEnabled = false;
+            CmdImg6.IsEnabled = false;
+            CmdImg7.IsEnabled = false;
+            CmdImg8.IsEnabled = false;
+            CmdImg9.IsEnabled = false;
         }
         void EnableBouton()
         {
 
             CmdImg1.IsEnabled = true;
-            CmdImg1.IsEnabled = true;
-            CmdImg1.IsEnabled = true;
-            CmdImg1.IsEnabled = true;
+            CmdImg2.IsEnabled = true;
+            CmdImg3.IsEnabled = true;
+            CmdImg4.IsEnabled = true;
+            CmdImg5.IsEnabled = true;
+            CmdImg6.IsEnabled = true;
+            CmdImg7.IsEnabled = true;
+            CmdImg8.IsEnabled = true;
+            CmdImg9.IsEnabled = true;
         }
         void afficherScore()
         {
             LblPoint.Content = "Score: " + score + " sur " + nombreQ;
+        }
+        void MessageFin()
+        {
+            MessageBoxResult result = MessageBox.Show("Votre score est de " + score + " sur " + nombreQ + " - Voulez vous rejouer ? ", "WhatConnector", MessageBoxButton.YesNo);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    score = 0;
+                    nombreQ = 0;
+                    LblConnecteur.Content = "";
+                    LblPoint.Content = "";
+                    LblSucces.Content = "";
+                    GenererQuestion();
+                    break;
+                case MessageBoxResult.No:
+                   
+                    break;
+              
+            }
         }
     }
 }
