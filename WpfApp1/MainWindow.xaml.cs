@@ -33,13 +33,16 @@ namespace WpfApp1
             tableauConnecteur.Add("PS2", "images/ps2.png");
             tableauConnecteur.Add("RJ11", "images/rj11.png");
          
-
+            
 
         }
 
         private void CmdGo_Click(object sender, RoutedEventArgs e)
         {
             GenererQuestion();
+            CmdGo.Visibility = Visibility.Hidden;
+            CmdSuivant.Visibility = Visibility.Visible;
+            //CmdSuivant.IsEnabled = false;
         }
         void GenererQuestion()
         {
@@ -50,7 +53,8 @@ namespace WpfApp1
             LblConnecteur.Content = tableauConnecteur.ElementAt(nombreRandom).Key;
             EnableBouton();
             AfficherConnecteur();
-         
+            //desactive le bouton tant que l'utilisateur n'a pas répondu
+            CmdSuivant.IsEnabled = false;
         }
 
         void AfficherConnecteur()
@@ -203,6 +207,7 @@ namespace WpfApp1
         private void CmdSuivant_Click(object sender, RoutedEventArgs e)
         {
             GenererQuestion();
+            
         }
 
         private void CmdImg1_Click(object sender, RoutedEventArgs e)
@@ -228,7 +233,8 @@ namespace WpfApp1
             {
                 MessageFin();
             }
-            
+            CmdSuivant.IsEnabled = true;
+
         }
 
 
@@ -273,6 +279,7 @@ namespace WpfApp1
                     LblConnecteur.Content = "";
                     LblPoint.Content = "";
                     LblSucces.Content = "";
+                    CmdGo.Visibility = Visibility.Visible;
                     GenererQuestion();
                     break;
                 case MessageBoxResult.No:

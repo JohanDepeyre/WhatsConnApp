@@ -7,23 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1100">
     <Grid>
-        <Button x:Name="CmdSuivant" Content="Suivant" HorizontalAlignment="Left" Margin="497,235,0,0" VerticalAlignment="Top" Width="75" Click="CmdSuivant_Click" FontFamily="Rubik" FontSize="18" Height="30" Background="#FFFFA5A5"/>
-        <Label x:Name="LblConnecteur" Content="" HorizontalAlignment="Left" Margin="340,235,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="18"/>
-        <Button x:Name="CmdGo" Content="Départ" HorizontalAlignment="Left" Margin="52,171,0,0" VerticalAlignment="Top" Width="75" Click="CmdGo_Click" FontSize="18" Background="#FFA7B7F1" FontFamily="Rubik"/>
-        <Button Name="CmdImg1" Tag="1" Width="100" Height="100" Margin="27,372,965,147" Click="CmdImg1_Click"/>
-        <Button x:Name="CmdImg2" Tag="2" Width="100" Height="100" Margin="145,372,847,147" Click="CmdImg1_Click"/>
-        <Button x:Name="CmdImg3" Tag="3" Width="100" Height="100" Margin="267,372,725,147" Click="CmdImg1_Click"/>
-        <Button x:Name="CmdImg4" Tag="4" Width="100" Height="100" Margin="390,372,602,147" Click="CmdImg1_Click"/>
-        <Button Name="CmdImg5"  Tag="5" Width="100" Height="100" Margin="513,372,479,147" Click="CmdImg1_Click"/>
-        <Button Name="CmdImg6" Tag="6" Width="100" Height="100" Margin="628,372,364,147" Click="CmdImg1_Click"/>
-        <Button Name="CmdImg7" Tag="7" Width="100" Height="100" Margin="744,372,248,147" Click="CmdImg1_Click"/>
-        <Button Name="CmdImg8" Tag="8" Width="100" Height="100" Margin="849,372,143,147" Click="CmdImg1_Click"/>
-        <Button Name="CmdImg9" Tag="9" Width="100" Height="100" Margin="971,372,21,147" Click="CmdImg1_Click"/>
+        <Button x:Name="CmdSuivant" Visibility="Hidden" Content="Suivant" HorizontalAlignment="Left" Margin="501,185,0,0" VerticalAlignment="Top" Width="75" Click="CmdSuivant_Click" FontFamily="Rubik" FontSize="18" Height="30" Background="#FFFFA5A5"/>
+        <Label x:Name="LblConnecteur" Content="" HorizontalAlignment="Left" Margin="354,184,0,0" VerticalAlignment="Top" FontFamily="Rubik" FontSize="18"/>
+        <Button x:Name="CmdGo" Content="Départ" HorizontalAlignment="Left" Margin="66,126,0,0" VerticalAlignment="Top" Width="75" Click="CmdGo_Click" FontSize="18" Background="#FFA7B7F1" FontFamily="Rubik"/>
+        <Button Name="CmdImg1" Tag="1" Width="150" Height="150" Margin="50,264,890,205" Click="CmdImg1_Click"/>
+        <Button x:Name="CmdImg2" Tag="2" Width="150" Height="150" Margin="52,440,890,29" Click="CmdImg1_Click"/>
+        <Button x:Name="CmdImg3" Tag="3" Width="150" Height="150" Margin="250,264,692,205" Click="CmdImg1_Click"/>
+        <Button x:Name="CmdImg4" Tag="4" Width="150" Height="150" Margin="450,264,492,205" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg5"  Tag="5" Width="150" Height="150" Margin="650,264,292,205" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg6" Tag="6" Width="150" Height="150" Margin="250,440,692,29" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg7" Tag="7" Width="150" Height="150" Margin="450,440,492,29" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg8" Tag="8" Width="150" Height="150" Margin="650,440,292,29" Click="CmdImg1_Click"/>
+        <Button Name="CmdImg9" Tag="9" Width="150" Height="150" Margin="850,264,92,205" Click="CmdImg1_Click"/>
 
-        <Label x:Name="LblSucces" Content="" HorizontalAlignment="Left" Margin="923,221,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="60" Width="119" FontSize="36"/>
-        <Label x:Name="LblPoint" Content="" HorizontalAlignment="Left" Margin="645,235,0,0" VerticalAlignment="Top" Width="151" Height="27" FontSize="16" FontFamily="Rubik"/>
+        <Label x:Name="LblSucces" Content="" HorizontalAlignment="Left" Margin="922,165,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="60" Width="119" FontSize="36"/>
+        <Label x:Name="LblPoint" Content="" HorizontalAlignment="Left" Margin="640,188,0,0" VerticalAlignment="Top" Width="151" Height="27" FontSize="16" FontFamily="Rubik"/>
         <Label x:Name="LblConsigne" Content="Identifiez le connecteur qui s'affiche ci-dessous en &#xD;&#xA;cliquant sur la bonne image" HorizontalAlignment="Left" Margin="52,34,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="73" Width="676"/>
-        <Label x:Name="LblConsigneCon" Content="Idenfitifier le connecteur suivant :" HorizontalAlignment="Left" Margin="52,235,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.74,-0.951"/>
+        <Label x:Name="LblConsigneCon" Content="Idenfitifier le connecteur suivant :" HorizontalAlignment="Left" Margin="66,184,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.74,-0.951"/>
         <Image x:Name="ImgLogo" HorizontalAlignment="Left" Height="113" Margin="771,10,0,0" VerticalAlignment="Top" Width="214" Source="images/logo.png"/>
 
     </Grid>

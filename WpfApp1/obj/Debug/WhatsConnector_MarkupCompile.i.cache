@@ -1,11 +1,11 @@
-﻿WpfApp1
+﻿WhatsConnector
 
 
 winexe
 C#
 .cs
 C:\Users\j.depeyre\source\repos\WhatConnectors\WpfApp1\obj\Debug\
-WpfApp1
+WhatsConnector
 none
 false
 DEBUG;TRACE
@@ -16,5 +16,5 @@ C:\Users\j.depeyre\source\repos\WhatConnectors\WpfApp1\App.xaml
 2051754025012
 MainWindow.xaml;
 
-False
+True
 
